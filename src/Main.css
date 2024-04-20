@@ -1,0 +1,103 @@
+.main-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.title-container,
+.title {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center the title */
+    z-index: 2; /* Ensures the title appears above the orbiting buttons */
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #61dafb;
+}
+
+.orbits-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbit {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: orbitAnimation linear infinite;
+}
+
+.orbit button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #282c34;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.orbit button:hover {
+    transform: scale(1.05);
+    background-color: #4f9dae;
+}
+
+/* Adjust the animation duration for each orbit */
+.orbit-1 {
+    animation-duration: 20s;
+}
+.orbit-2 {
+    animation-duration: 18s;
+}
+.orbit-3 {
+    animation-duration: 16s;
+}
+.orbit-4 {
+    animation-duration: 14s;
+}
+.orbit-5 {
+    animation-duration: 12s;
+}
+.orbit-6 {
+    animation-duration: 10s;
+}
+
+@keyframes orbitAnimation {
+    0% {
+        transform: rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
