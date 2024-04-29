@@ -1,0 +1,41 @@
+.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.intro-image {
+    cursor: pointer; /* 이미지에 클릭 가능한 효과를 주기 위해 */
+    transition: transform 0.3s ease; /* 호버 시 약간 확대 */
+}
+
+.intro-image:hover {
+    transform: scale(1.05);
+}
+
+.image-rotate {
+    animation: person-rotate 1.6s infinite alternate;
+}
+
+@keyframes person-rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(30deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(-30deg) scale(0.9);
+    }
+}
