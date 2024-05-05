@@ -2,14 +2,15 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from './Main';
-import Mimar from './Mimar'; // Ensure Mimar is correctly imported
-import { Rivera } from './Rivera';
-import { Doesberg } from './Doesburg';
-import { Pugin } from './Pugin';
-import { Rohde } from './Rohde';
-import { Hokusai } from './Hokusai';
+import Mimar from './Mimar';
+import JunHyung from './JunHyung';
+import Rivera from './Rivera';
+import Doesberg from './Doesberg';
+import Pugin from './Pugin';
+import Rohde from './Rohde';
+import Hokusai from './Hokusai';
 import IntroVideo from './IntroVideo';
-import BaboQueen from './BaboQueen';
+import Huston from './Huston';
 
 function App() {
     return (
@@ -18,13 +19,14 @@ function App() {
                 <Routes>
                     <Route path="/" element={<IntroVideo />} />
                     <Route path="/main" element={<Main />} />
+                    <Route path="/junhyung" element={<JunHyung />} />
                     <Route path="/mimar" element={<Mimar />} />
                     <Route path="/rivera" element={<Rivera />} />
                     <Route path="/doesberg" element={<Doesberg />} />
                     <Route path="/pugin" element={<Pugin />} />
                     <Route path="/rohde" element={<Rohde />} />
                     <Route path="/hokusai" element={<Hokusai />} />
-                    <Route path="/baboqueen" element={<BaboQueen />} />
+                    <Route path="/huston" element={<Huston />} />
                 </Routes>
             </Router>
         </div>

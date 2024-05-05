@@ -25,6 +25,36 @@
     animation: person-rotate 1.6s infinite alternate;
 }
 
+.example-img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+.bio {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.exm {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.hst {
+    width: 10%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
 @keyframes person-rotate {
     0% {
         transform: rotate(0deg) scale(1);

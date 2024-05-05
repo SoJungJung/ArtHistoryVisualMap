@@ -1,41 +1,65 @@
-import React, { useRef, useEffect } from 'react';
-import './Artist.css'; // Make sure the path matches where your CSS file is located
-
-// Assuming you have images in your public folder or hosted online
-const artistPhotoUrl = '/path-to-artist-photo.jpg'; // Replace with actual path
-const exampleOfWorkUrl = '/path-to-example-work.jpg'; // Replace with actual path
+import React, { useRef, useEffect, useState } from 'react';
+import RohdeIMG from './assets/images/Rohde.png';
+import RohdeExample from './assets/images/RohdeExample.png';
+import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import Backbutton from './BackButton';
 
 const Rohde = () => {
+    const audioRef = useRef();
+    const [pageVisible, setPageVisible] = useState(false);
+    const [audioPlaying, setAudioPlaying] = useState(false);
+
+    const handleImageClick = () => {
+        setPageVisible(true);
+        document.getElementById('intro-image').classList.add('fade-out');
+        setTimeout(() => {
+            if (audioRef.current && !audioPlaying) {
+                audioRef.current.play();
+                setAudioPlaying(true);
+            }
+        }, 1000);
+    };
+    useEffect(() => {
+        setTimeout(() => {}, 2000);
+        handleImageClick();
+    }, []);
     return (
         <div className="container">
-            <img src={artistPhotoUrl} alt="Artist Photo" className="photo" />
-            <h2>Gilbert Rohde</h2>
-            <p className="bio">
-                Rhodes and I have in common that I make art in a modernistic way. As I work on programming, my design
-                and outlook are influenced by Modernism because it looks simply, which means the design does not
-                interrupt the embedded software.
-            </p>
-            <h3>Example of Work</h3>
-            <img src={exampleOfWorkUrl} alt="Example of Work" className="work-image" />
+            <Backbutton />
+            {!pageVisible && (
+                <img
+                    id="intro-image"
+                    src={RohdeIMG}
+                    alt="Intro-Image"
+                    onClick={handleImageClick}
+                    className="intro-image"
+                />
+            )}
+            {pageVisible && (
+                <>
+                    <h2>Gilbert Rohde</h2>
+                    <img src={RohdeIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <p className="bio">
+                        Rohde and I have in common that I make art in a modernistic way. As I work on programming, my
+                        Modernism influences design and outlook because it look simple, which means the design does not
+                        interrupt the embedded software.
+                    </p>
+                    <img src={RohdeExample} alt="Example-Image" className="example-img" />
+                    <h3>Example of Work: Sketches of a Pencil Case (2022)</h3>
+                    <h2>Related to Mine</h2>
+                    <p className="exm">
+                        I once tried designing a modernist mechanical pencil case. Although I didn't make a the real
+                        version, I tried to implant a sense of modernism in the design.
+                    </p>
+                    <p className="rlt"></p>
+                    <audio ref={audioRef} controls onLoadStart={(e) => (e.target.volume = 0.25)} preload="auto">
+                        <source src="./Gilbert.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio elements.
+                    </audio>
+                </>
+            )}
         </div>
     );
 };
 
-const AutoPlayAudio = ({ src }) => {
-    const audioRef = useRef(null);
-
-    useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.play().catch((error) => console.error('Audio autoplay failed', error));
-        }
-    }, [src]);
-
-    return (
-        <audio ref={audioRef} controls muted>
-            <source src={src} type="awake/mp3" />
-            Your browser does not support the audio element.
-        </audio>
-    );
-};
-
-export { Rohde, AutoPlayAudio }; // Named exports
+export default Rohde; // Named exports

@@ -1,40 +1,67 @@
-import React, { useRef, useEffect } from 'react';
-import './Artist.css'; // Make sure the path matches where your CSS file is located
-
-// Assuming you have images in your public folder or hosted online
-const artistPhotoUrl = '/path-to-artist-photo.jpg'; // Replace with actual path
-const exampleOfWorkUrl = '/path-to-example-work.jpg'; // Replace with actual path
+import React, { useRef, useEffect, useState } from 'react';
+import HokusaiIMG from './assets/images/Hokusai.png';
+import HokusaiExample from './assets/images/HokusaiExample.png';
+import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import Backbutton from './BackButton';
 
 const Hokusai = () => {
+    const audioRef = useRef();
+    const [pageVisible, setPageVisible] = useState(false);
+    const [audioPlaying, setAudioPlaying] = useState(false);
+
+    const handleImageClick = () => {
+        setPageVisible(true);
+        document.getElementById('intro-image').classList.add('fade-out');
+        setTimeout(() => {
+            if (audioRef.current && !audioPlaying) {
+                audioRef.current.play();
+                setAudioPlaying(true);
+            }
+        }, 1000);
+    };
+    useEffect(() => {
+        setTimeout(() => {}, 2000);
+        handleImageClick();
+    }, []);
     return (
         <div className="container">
-            <img src={artistPhotoUrl} alt="Artist Photo" className="photo" />
-            <h2>Katshshika Hoskusai</h2>
-            <p className="bio">
-                My art practice is different from what Hokusai did. I have never tried printing or ukiyo-e art before.
-                I, however, am really interested in how to make my art pieces as a meme that survives through centuries.
-            </p>
-            <h3>Example of Work</h3>
-            <img src={exampleOfWorkUrl} alt="Example of Work" className="work-image" />
+            <Backbutton />
+            {!pageVisible && (
+                <img
+                    id="intro-image"
+                    src={HokusaiIMG}
+                    alt="Intro-Image"
+                    onClick={handleImageClick}
+                    className="intro-image"
+                />
+            )}
+            {pageVisible && (
+                <>
+                    <h2>Katsushika Hokusai</h2>
+                    <img src={HokusaiIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <p className="bio">
+                        My art practice is different from what Hokusai did. I have never tried printing or ukiyo-e art
+                        before. I, however, am interested in how to make my art pieces as a meme that survives through
+                        centuries.
+                    </p>
+                    <img src={HokusaiExample} alt="Example-Image" className="example-img" />
+                    <h3>Example of Work: The Island (2022) </h3>
+                    <h2>Related to Mine</h2>
+                    <p className="exm">
+                        Although I seldom drew landscapes like Hokusai, I drew simulated island landscapes. This piece
+                        was drawn after the pillows and a blanket on my bed. It is not colorful or energetic like
+                        Hokusai's work, nor recognized as a masterpiece, but it is a piece that I can relate to, and my
+                        mom likes mine more.^^
+                    </p>
+                    <p className="rlt"></p>
+                    <audio ref={audioRef} controls onLoadStart={(e) => (e.target.volume = 0.25)} preload="auto">
+                        <source src="./Hokusai.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio elements.
+                    </audio>
+                </>
+            )}
         </div>
     );
 };
 
-const AutoPlayAudio = ({ src }) => {
-    const audioRef = useRef(null);
-
-    useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.play().catch((error) => console.error('Audio autoplay failed', error));
-        }
-    }, [src]);
-
-    return (
-        <audio ref={audioRef} controls muted>
-            <source src={src} type="awake/mp3" />
-            Your browser does not support the audio element.
-        </audio>
-    );
-};
-
-export { Hokusai, AutoPlayAudio }; // Named exports
+export default Hokusai; // Named exports

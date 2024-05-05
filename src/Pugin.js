@@ -1,41 +1,66 @@
-import React, { useRef, useEffect } from 'react';
-import './Artist.css'; // Make sure the path matches where your CSS file is located
-
-// Assuming you have images in your public folder or hosted online
-const artistPhotoUrl = '/path-to-artist-photo.jpg'; // Replace with actual path
-const exampleOfWorkUrl = '/path-to-example-work.jpg'; // Replace with actual path
+import React, { useRef, useEffect, useState } from 'react';
+import PuginIMG from './assets/images/Pugin.png';
+import PuginExample from './assets/images/PuginExample.png';
+import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import Backbutton from './BackButton';
 
 const Pugin = () => {
+    const audioRef = useRef();
+    const [pageVisible, setPageVisible] = useState(false);
+    const [audioPlaying, setAudioPlaying] = useState(false);
+
+    const handleImageClick = () => {
+        setPageVisible(true);
+        document.getElementById('intro-image').classList.add('fade-out');
+        setTimeout(() => {
+            if (audioRef.current && !audioPlaying) {
+                audioRef.current.play();
+                setAudioPlaying(true);
+            }
+        }, 1000);
+    };
+    useEffect(() => {
+        setTimeout(() => {}, 2000);
+        handleImageClick();
+    }, []);
     return (
         <div className="container">
-            <img src={artistPhotoUrl} alt="Artist Photo" className="photo" />
-            <h2>Mimar Sinan</h2>
-            <p className="bio">
-                The Sinan’s work does not have deep connections with mine, because Sinan focused on architecture, while
-                I focus on the combination of art and technology. In terms of influence of various culture, however, I
-                have some connections with his work, because I try to combine diverse cultures in my work.
-            </p>
-            <h3>Example of Work</h3>
-            <img src={exampleOfWorkUrl} alt="Example of Work" className="work-image" />
+            <Backbutton />
+            {!pageVisible && (
+                <img
+                    id="intro-image"
+                    src={PuginIMG}
+                    alt="Intro-Image"
+                    onClick={handleImageClick}
+                    className="intro-image"
+                />
+            )}
+            {pageVisible && (
+                <>
+                    <h2>AWM Pugin</h2>
+                    <img src={PuginIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <p className="bio">
+                        Pugin's dedication resonates with my work in art and technology, inspiring me to infuse my
+                        creations with both innovation and a deeper moral significance, akin to Pugin's integration of
+                        ethical considerations into his architectural masterpieces.
+                    </p>
+                    <img src={PuginExample} alt="Example-Image" className="example-img" />
+                    <h3>Example of Work: P.A.U.L. (2024) </h3>
+                    <h2>Related to Mine</h2>
+                    <p className="exm">
+                        P.A.U.L. used to be a 10$ toy RC car. After hacking and adjustment, the viewers (at least in my
+                        class) I liked this piece and considered it cute. I never thought of moral or spritual
+                        significance in this piece, but I think the viewers added some.
+                    </p>
+                    <p className="rlt"></p>
+                    <audio ref={audioRef} controls onLoadStart={(e) => (e.target.volume = 0.25)} preload="auto">
+                        <source src="./Pugin.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio elements.
+                    </audio>
+                </>
+            )}
         </div>
     );
 };
 
-const AutoPlayAudio = ({ src }) => {
-    const audioRef = useRef(null);
-
-    useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.play().catch((error) => console.error('Audio autoplay failed', error));
-        }
-    }, [src]);
-
-    return (
-        <audio ref={audioRef} controls muted>
-            <source src={src} type="awake/mp3" />
-            Your browser does not support the audio element.
-        </audio>
-    );
-};
-
-export { Pugin, AutoPlayAudio }; // Named exports
+export default Pugin; // Named exports
