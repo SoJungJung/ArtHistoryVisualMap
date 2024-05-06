@@ -10,7 +10,7 @@ const JunHyung = () => {
 
     const handleImageClick = () => {
         setPageVisible(true);
-
+        document.getElementById('intro-image').classList.add('fade-out');
         setTimeout(() => {
             if (audioRef.current && !audioPlaying) {
                 audioRef.current.play();
@@ -22,6 +22,9 @@ const JunHyung = () => {
     return (
         <div className="container">
             <Backbutton />
+            {!pageVisible && (
+                <img id="intro-image" src={JHIMG} alt="jh-intro-1" onClick={handleImageClick} className="intro-image" />
+            )}
             {pageVisible && (
                 <>
                     <img src={JHImg} alt="jun_hyung" className="wnsgud" />
