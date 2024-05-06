@@ -25,19 +25,7 @@ const artists = [
 
 const Main = () => {
     const navigate = useNavigate();
-    const [tooltip, setTooltip] = useState('');
 
-    const redirectToArtist = (artistRoute) => {
-        navigate(artistRoute);
-    };
-
-    const handleMouseEnter = (artistName) => {
-        setTooltip(artistName);
-    };
-
-    const handleMouseLeave = () => {
-        setTooltip('');
-    };
     const [hoverIndex, setHoverIndex] = useState(null);
 
     const handleJHClick = () => {

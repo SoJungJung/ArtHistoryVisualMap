@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // useNavigate 훅 임포트
 import introVideo from './assets/videos/VisualMapOpening.mp4';
 import './IntroVideo.css';
@@ -6,7 +6,6 @@ import './IntroVideo.css';
 const IntroVideo = ({ onVideoEnd }) => {
     const [showVideo, setShowVideo] = useState(true);
     const navigate = useNavigate();
-    const [pageVisible, setPageVisible] = useState(false);
     const videoRef = useRef(null); //
 
     const handlePlayVideo = () => {
@@ -26,7 +25,7 @@ const IntroVideo = ({ onVideoEnd }) => {
 
     return (
         <>
-            {!pageVisible && !showVideo && (
+            {!showVideo && (
                 <div>
                     <button onClick={handlePlayVideo} className="PlayButton">
                         play video
