@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import RiveraIMG from './assets/images/Rivera.png';
 import RiveraExample from './assets/images/RiveraExample.png';
-import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import './CSS/Mimar.css'; // Make sure the path matches where your CSS file is located
 import Backbutton from './BackButton';
 
 const Rivera = () => {

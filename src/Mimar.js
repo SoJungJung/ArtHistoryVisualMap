@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import MimarImg from './assets/images/Mimar.png';
 import MimarExample from './assets/images/MimarExample.png';
-import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import './CSS/Mimar.css'; // Make sure the path matches where your CSS file is located
 import Backbutton from './BackButton';
 
 const Mimar = () => {

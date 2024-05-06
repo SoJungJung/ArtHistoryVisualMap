@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import HokusaiIMG from './assets/images/Hokusai.png';
 import HokusaiExample from './assets/images/HokusaiExample.png';
-import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import './CSS/Mimar.css'; // Make sure the path matches where your CSS file is located
 import Backbutton from './BackButton';
 
 const Hokusai = () => {

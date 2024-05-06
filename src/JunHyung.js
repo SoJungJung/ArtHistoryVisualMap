@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './junhyung.css'; // Make sure the path matches where your CSS file is located
+import './CSS/junhyung.css'; // Make sure the path matches where your CSS file is located
 import Backbutton from './BackButton';
 import JHImg from './assets/images/jh.png';
 

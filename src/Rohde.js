@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import RohdeIMG from './assets/images/Rohde.png';
 import RohdeExample from './assets/images/RohdeExample.png';
-import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import './CSS/Mimar.css'; // Make sure the path matches where your CSS file is located
 import Backbutton from './BackButton';
 
 const Rohde = () => {

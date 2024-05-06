@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import VanIMG from './assets/images/Van.png';
 import VanExample from './assets/images/VanExample.png';
-import './Mimar.css'; // Make sure the path matches where your CSS file is located
+import './CSS/Mimar.css'; // Make sure the path matches where your CSS file is located
 import Backbutton from './BackButton';
 
 const Doesberg = () => {

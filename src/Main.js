@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Main.css'; // Ensure your CSS file path is correct
+import './CSS/Main.css'; // Ensure your CSS file path is correct
 import JHImg from './assets/images/jh.png';
 
 import Hokusai from './assets/images/Hokusai.png';

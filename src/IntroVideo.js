@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // useNavigate 훅 임포트
 import introVideo from './assets/videos/VisualMapOpening.mp4';
-import './IntroVideo.css';
+import './CSS/IntroVideo.css';
 
 const IntroVideo = ({ onVideoEnd }) => {
     const [showVideo, setShowVideo] = useState(true);
