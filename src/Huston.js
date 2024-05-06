@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import HustonIMG from './assets/images/Huston.jpeg';
 import HustonExample from './assets/videos/Example.mp4';
 import './Mimar.css'; // Make sure the path matches where your CSS file is located
@@ -19,10 +19,7 @@ const Huston = () => {
             }
         }, 1000);
     };
-    useEffect(() => {
-        setTimeout(() => {}, 2000);
-        handleImageClick();
-    }, []);
+
     return (
         <div className="container">
             <Backbutton />

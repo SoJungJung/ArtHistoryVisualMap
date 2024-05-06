@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import RohdeIMG from './assets/images/Rohde.png';
 import RohdeExample from './assets/images/RohdeExample.png';
 import './Mimar.css'; // Make sure the path matches where your CSS file is located
@@ -19,10 +19,7 @@ const Rohde = () => {
             }
         }, 1000);
     };
-    useEffect(() => {
-        setTimeout(() => {}, 2000);
-        handleImageClick();
-    }, []);
+
     return (
         <div className="container">
             <Backbutton />

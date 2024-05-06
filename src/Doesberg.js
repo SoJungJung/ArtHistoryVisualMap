@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import VanIMG from './assets/images/Van.png';
 import VanExample from './assets/images/VanExample.png';
 import './Mimar.css'; // Make sure the path matches where your CSS file is located
@@ -18,12 +18,6 @@ const Doesberg = () => {
             }
         }, 1000);
     };
-
-    useEffect(() => {
-        setTimeout(() => {}, 2000);
-        handleImageClick();
-    }, []);
-
     return (
         <div className="container">
             <Backbutton />
