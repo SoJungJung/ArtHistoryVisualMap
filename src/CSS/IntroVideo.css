@@ -1,20 +1,27 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.introvideo-css {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
 }
+
 .PlayButton {
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    background-color: #a89058;
-    border: none;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  background-color: #a89058;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.PlayButton:hover {
+  background-color: #ffffff;
+  color: black;
 }

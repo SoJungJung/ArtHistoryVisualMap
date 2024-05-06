@@ -1,83 +1,88 @@
+.container {
+  background-color: #282c34;
+  color: white;
+}
+
 .fade-out {
-    animation: fadeOut 1s ease-out forwards;
+  animation: fadeOut 1s ease-out forwards;
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .intro-image {
-    cursor: pointer; /* 이미지에 클릭 가능한 효과를 주기 위해 */
-    transition: transform 0.3s ease; /* 호버 시 약간 확대 */
+  cursor: pointer; /* 이미지에 클릭 가능한 효과를 주기 위해 */
+  transition: transform 0.3s ease; /* 호버 시 약간 확대 */
 }
 
 .intro-image:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .image-rotate {
-    animation: person-rotate 1.6s infinite alternate;
+  animation: person-rotate 1.6s infinite alternate;
 }
 
 .example-img {
-    width: 500px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 .bio {
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #ffffff;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ffffff;
 }
 .btitle {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20pt;
-    color: #ffffff;
-    text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20pt;
+  color: #ffffff;
+  text-align: center;
 }
 .stitle {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16pt;
-    color: #ffffff;
-    text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16pt;
+  color: #ffffff;
+  text-align: center;
 }
 .exm {
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #ffffff;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ffffff;
 }
 
 .hst {
-    width: 10%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+  width: 10%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 @keyframes person-rotate {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    25% {
-        transform: rotate(30deg) scale(1.1);
-    }
-    50% {
-        transform: rotate(0deg) scale(1);
-    }
-    100% {
-        transform: rotate(-30deg) scale(0.9);
-    }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(30deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(-30deg) scale(0.9);
+  }
 }
