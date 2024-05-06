@@ -23,7 +23,7 @@ const JunHyung = () => {
         <div className="container">
             <Backbutton />
             {!pageVisible && (
-                <img id="intro-image" src={JHIMG} alt="jh-intro-1" onClick={handleImageClick} className="intro-image" />
+                <img id="intro-image" src={JHImg} alt="jh-intro-1" onClick={handleImageClick} className="intro-image" />
             )}
             {pageVisible && (
                 <>
