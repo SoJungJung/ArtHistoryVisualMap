@@ -30,7 +30,7 @@ const Pugin = () => {
                 <img
                     id="intro-image"
                     src={PuginIMG}
-                    alt="Intro-Image"
+                    alt="pugin-intro-1"
                     onClick={handleImageClick}
                     className="intro-image"
                 />
@@ -38,13 +38,13 @@ const Pugin = () => {
             {pageVisible && (
                 <>
                     <h2>AWM Pugin</h2>
-                    <img src={PuginIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <img src={PuginIMG} alt="pugin-intro-2" className="intro-image image-rotate image-scale" />
                     <p className="bio">
                         Pugin's dedication resonates with my work in art and technology, inspiring me to infuse my
                         creations with both innovation and a deeper moral significance, akin to Pugin's integration of
                         ethical considerations into his architectural masterpieces.
                     </p>
-                    <img src={PuginExample} alt="Example-Image" className="example-img" />
+                    <img src={PuginExample} alt="pugin-intro-3" className="example-img" />
                     <h3 className="btitle">Example of Work: P.A.U.L. (2024) </h3>
                     <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">

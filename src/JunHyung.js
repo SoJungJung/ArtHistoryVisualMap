@@ -27,7 +27,7 @@ const JunHyung = () => {
             <Backbutton />
             {pageVisible && (
                 <>
-                    <img src={JHImg} alt="Example-Image" className="wnsgud" />
+                    <img src={JHImg} alt="jun_hyung" className="wnsgud" />
                     <h2 className="jhtitle">One Page Explanation</h2>
                     <p className="biograph">
                         I have designed an orbital system with various artists conceptualized as planets revolving

@@ -30,7 +30,7 @@ const Rivera = () => {
                 <img
                     id="intro-image"
                     src={RiveraIMG}
-                    alt="Intro-Image"
+                    alt="rivera-intro-1"
                     onClick={handleImageClick}
                     className="intro-image"
                 />
@@ -38,13 +38,13 @@ const Rivera = () => {
             {pageVisible && (
                 <>
                     <h2>Diego Rivera</h2>
-                    <img src={RiveraIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <img src={RiveraIMG} alt="rivera-intro-2" className="intro-image image-rotate image-scale" />
                     <p className="bio">
                         Rivera’s desire to make art accessible to everyday people resonates with my goal in art: to
                         bring joy through the playful interactivity of my robots and websites, bridging the gap between
                         the viewer and the artwork in innovative ways.
                     </p>
-                    <img src={RiveraExample} alt="Example-Image" className="example-img" />
+                    <img src={RiveraExample} alt="rivera-intro-3" className="example-img" />
                     <h3 className="btitle">Example of Work: Mosaicsphere (2024)</h3>
                     <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">

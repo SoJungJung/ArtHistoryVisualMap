@@ -30,7 +30,7 @@ const Huston = () => {
                 <img
                     id="intro-image"
                     src={HustonIMG}
-                    alt="Intro-Image"
+                    alt="huston-intro-1"
                     onClick={handleImageClick}
                     className="intro-image"
                 />
@@ -38,19 +38,19 @@ const Huston = () => {
             {pageVisible && (
                 <>
                     <h2>John Huston</h2>
-                    <img src={HustonIMG} alt="Intro-Image" className="hst" />
+                    <img src={HustonIMG} alt="huston-intro-2" className="hst" />
                     <p className="bio">
                         I also tried to become a filmmaker, just like John Huston did. But the connection between him
                         and me lies in the fact that we have different editing styles. While John Huston makes
                         slow-paced, Noir, hard-boiled films with almost no background music, I prefer fast-paced and
                         dynamic background music.
                     </p>
-                    <video src={HustonExample} controls alt="Example-Image" className="example-img" />
+                    <video src={HustonExample} controls alt="huston-intro-3" className="example-img" />
                     <h3 className="btitle">Example of Work: Rip it, Cut it, and Slice it (2023) </h3>
                     <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
-                        Although the styles differ, I want to be a great artist like John Huston someday. This video was
-                        an assignment for FVMNA class, and I tried to make a video that is similar to Youtube highlight
+                        The styles differ, I want to be a great artist like John Huston someday. This video was an
+                        assignment for FVMNA class, and I tried to make a video that is similar to Youtube highlight
                         reels. It was a fun project, and I learned a lot from it.
                     </p>
                     <p className="rlt"></p>

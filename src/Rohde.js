@@ -30,7 +30,7 @@ const Rohde = () => {
                 <img
                     id="intro-image"
                     src={RohdeIMG}
-                    alt="Intro-Image"
+                    alt="rohde-intro-1"
                     onClick={handleImageClick}
                     className="intro-image"
                 />
@@ -38,13 +38,13 @@ const Rohde = () => {
             {pageVisible && (
                 <>
                     <h2>Gilbert Rohde</h2>
-                    <img src={RohdeIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <img src={RohdeIMG} alt="rohde-intro-2" className="intro-image image-rotate image-scale" />
                     <p className="bio">
                         Rohde and I have in common that I make art in a modernistic way. As I work on programming, my
                         Modernism influences design and outlook because it look simple, which means the design does not
                         interrupt the embedded software.
                     </p>
-                    <img src={RohdeExample} alt="Example-Image" className="example-img" />
+                    <img src={RohdeExample} alt="rohde-intro-3" className="example-img" />
                     <h3 className="btitle">Example of Work: Sketches of a Pencil Case (2022)</h3>
                     <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">

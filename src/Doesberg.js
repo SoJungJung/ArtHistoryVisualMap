@@ -31,7 +31,7 @@ const Doesberg = () => {
                 <img
                     id="intro-image"
                     src={VanIMG}
-                    alt="Intro-Image"
+                    alt="doesberg-intro-1"
                     onClick={handleImageClick}
                     className="intro-image"
                 />
@@ -39,13 +39,13 @@ const Doesberg = () => {
             {pageVisible && (
                 <>
                     <h2>Theo van Doesberg</h2>
-                    <img src={VanIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <img src={VanIMG} alt="doesberg-into-2" className="intro-image image-rotate image-scale" />
                     <p className="bio">
                         Theo van Doesberg's work can be related to my artworks in terms of choices of geometrical
                         shapes. The difference is that van Doesberg chose rectangular shapes, but I often chose other
                         geometrical shapes rather than rectangular for my art practice.
                     </p>
-                    <img src={VanExample} alt="Example-Image" className="example-img" />
+                    <img src={VanExample} alt="doesberg-intro-3" className="example-img" />
                     <h3 className="btitle">Example of Work: Untitled (2023)</h3>
                     <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">

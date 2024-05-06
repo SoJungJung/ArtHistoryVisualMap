@@ -30,7 +30,7 @@ const Mimar = () => {
                 <img
                     id="intro-image"
                     src={MimarImg}
-                    alt="Intro-Image"
+                    alt="mimar-intro-1"
                     onClick={handleImageClick}
                     className="intro-image"
                 />
@@ -38,13 +38,13 @@ const Mimar = () => {
             {pageVisible && (
                 <>
                     <h2>Mimar Sinan</h2>
-                    <img src={MimarImg} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <img src={MimarImg} alt="mimar-intro-2" className="intro-image image-rotate image-scale" />
                     <p className="bio">
                         Sinan’s work does not have deep connections with mine because Sinan focused on architecture,
                         while I focused on combining art and technology. In terms of the influence of various cultures,
                         however, I have some connections with his work because I try to combine diverse cultures.
                     </p>
-                    <img src={MimarExample} alt="Example-Image" className="example-img" />
+                    <img src={MimarExample} alt="mimar-intro-3" className="example-img" />
                     <h3 className="btitle">
                         Example of Work: 망운지정(How a child away from home misses their parents) (2023){' '}
                     </h3>

@@ -30,7 +30,7 @@ const Hokusai = () => {
                 <img
                     id="intro-image"
                     src={HokusaiIMG}
-                    alt="Intro-Image"
+                    alt="hokusai-intro-1"
                     onClick={handleImageClick}
                     className="intro-image"
                 />
@@ -38,13 +38,13 @@ const Hokusai = () => {
             {pageVisible && (
                 <>
                     <h2>Katsushika Hokusai</h2>
-                    <img src={HokusaiIMG} alt="Intro-Image" className="intro-image image-rotate image-scale" />
+                    <img src={HokusaiIMG} alt="hokusai-intro-2" className="intro-image image-rotate image-scale" />
                     <p className="bio">
                         My art practice is different from what Hokusai did. I have never tried printing or ukiyo-e art
                         before. I, however, am interested in how to make my art pieces as a meme that survives through
                         centuries.
                     </p>
-                    <img src={HokusaiExample} alt="Example-Image" className="example-img" />
+                    <img src={HokusaiExample} alt="hokusai-intro-3" className="example-img" />
                     <h3 className="btitle">Example of Work: The Island (2022) </h3>
                     <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
