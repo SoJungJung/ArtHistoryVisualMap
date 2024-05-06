@@ -45,8 +45,8 @@ const Rivera = () => {
                         the viewer and the artwork in innovative ways.
                     </p>
                     <img src={RiveraExample} alt="Example-Image" className="example-img" />
-                    <h3>Example of Work: Mosaicsphere (2024)</h3>
-                    <h2>Related to Mine</h2>
+                    <h3 className="btitle">Example of Work: Mosaicsphere (2024)</h3>
+                    <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
                         Mosaicsphere is a user-collaborating collage maker website. I focused on the interactivity on
                         This website is meant to bridge not only me and the users but also among the users.

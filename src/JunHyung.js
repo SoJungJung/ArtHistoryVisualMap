@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './junhyung.css'; // Make sure the path matches where your CSS file is located
 import Backbutton from './BackButton';
+import JHImg from './assets/images/jh.png';
 
 const JunHyung = () => {
     const audioRef = useRef();
@@ -9,7 +10,7 @@ const JunHyung = () => {
 
     const handleImageClick = () => {
         setPageVisible(true);
-        document.getElementById('intro-image').classList.add('fade-out');
+
         setTimeout(() => {
             if (audioRef.current && !audioPlaying) {
                 audioRef.current.play();
@@ -26,8 +27,9 @@ const JunHyung = () => {
             <Backbutton />
             {pageVisible && (
                 <>
-                    <h2>One Page Explanation</h2>
-                    <p className="bio">
+                    <img src={JHImg} alt="Example-Image" className="wnsgud" />
+                    <h2 className="jhtitle">One Page Explanation</h2>
+                    <p className="biograph">
                         I have designed an orbital system with various artists conceptualized as planets revolving
                         around a central sun—myself. This system metaphorically captures the dynamic influences between
                         these seven artists and me. Each planet, distinct in portraits and names, symbolizes my personal
@@ -52,6 +54,7 @@ const JunHyung = () => {
                         shape my journey as an artist. Through this orbital system, I invite viewers to explore the
                         gravitational pull of artistic influences that orbit the central sun—my artistic identity.
                     </p>
+                    <br />
                     <audio ref={audioRef} controls onLoadStart={(e) => (e.target.volume = 0.25)} preload="auto">
                         <source src="./OnePageEx.mp3" type="audio/mpeg" />
                         Your browser does not support the audio elements.

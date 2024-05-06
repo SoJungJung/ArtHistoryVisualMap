@@ -18,21 +18,20 @@ const IntroVideo = ({ onVideoEnd }) => {
 
     // 비디오 재생이 끝난 후 호출할 함수
     const handleVideoEnd = () => {
-        setShowVideo(false); // 비디오를 숨깁니다.
         if (onVideoEnd) {
             onVideoEnd(); // 부모 컴포넌트의 onVideoEnd 함수를 호출합니다 (있는 경우).
         }
         navigate('/main'); // 메인 페이지로 이동합니다.
     };
-    useEffect(() => {
-        handlePlayVideo();
-    }, []);
+
     return (
         <>
-            {!pageVisible && (
-                <button onClick={handlePlayVideo} className="PlayButton">
-                    play video
-                </button>
+            {!pageVisible && !showVideo && (
+                <div>
+                    <button onClick={handlePlayVideo} className="PlayButton">
+                        play video
+                    </button>
+                </div>
             )}
             {showVideo && (
                 <div>

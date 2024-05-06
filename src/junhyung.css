@@ -1,4 +1,27 @@
-.bio {
+.wnsgud {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20pt;
+}
+.jhtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    color: #ffffff;
+    text-align: center;
+}
+.biograph {
     font-family: 'Times New Roman', Times, serif;
     font-size: 12pt;
+    color: #ffffff;
+    text-align: left;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+@media (max-width: 600px) {
+    .biograph {
+        margin: 0px 50px;
+    }
 }

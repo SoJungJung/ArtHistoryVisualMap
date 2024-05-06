@@ -45,8 +45,8 @@ const Rohde = () => {
                         interrupt the embedded software.
                     </p>
                     <img src={RohdeExample} alt="Example-Image" className="example-img" />
-                    <h3>Example of Work: Sketches of a Pencil Case (2022)</h3>
-                    <h2>Related to Mine</h2>
+                    <h3 className="btitle">Example of Work: Sketches of a Pencil Case (2022)</h3>
+                    <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
                         I once tried designing a modernist mechanical pencil case. Although I didn't make a the real
                         version, I tried to implant a sense of modernism in the design.

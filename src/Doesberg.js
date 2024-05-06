@@ -11,7 +11,6 @@ const Doesberg = () => {
 
     const handleImageClick = () => {
         setPageVisible(true);
-        document.getElementById('intro-image').classList.add('fade-out');
         setTimeout(() => {
             if (audioRef.current && !audioPlaying) {
                 audioRef.current.play();
@@ -46,9 +45,9 @@ const Doesberg = () => {
                         shapes. The difference is that van Doesberg chose rectangular shapes, but I often chose other
                         geometrical shapes rather than rectangular for my art practice.
                     </p>
-                    <img src={VanExample} alt="Example-Image" />
-                    <h3>Example of Work: Untitled (2023)</h3>
-                    <h2>Related to Mine</h2>
+                    <img src={VanExample} alt="Example-Image" className="example-img" />
+                    <h3 className="btitle">Example of Work: Untitled (2023)</h3>
+                    <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
                         just like van Doesberg's work, this piece has diagonal, and geometrical shapes and strong, bold
                         colors. The difference is that this piece has a FM radio transmitter inside.

@@ -45,8 +45,8 @@ const Pugin = () => {
                         ethical considerations into his architectural masterpieces.
                     </p>
                     <img src={PuginExample} alt="Example-Image" className="example-img" />
-                    <h3>Example of Work: P.A.U.L. (2024) </h3>
-                    <h2>Related to Mine</h2>
+                    <h3 className="btitle">Example of Work: P.A.U.L. (2024) </h3>
+                    <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
                         P.A.U.L. used to be a 10$ toy RC car. After hacking and adjustment, the viewers (at least in my
                         class) I liked this piece and considered it cute. I never thought of moral or spritual

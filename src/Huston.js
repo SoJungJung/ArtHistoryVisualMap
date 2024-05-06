@@ -46,8 +46,8 @@ const Huston = () => {
                         dynamic background music.
                     </p>
                     <video src={HustonExample} controls alt="Example-Image" className="example-img" />
-                    <h3>Example of Work: Rip it, Cut it, and Slice it (2023) </h3>
-                    <h2>Related to Mine</h2>
+                    <h3 className="btitle">Example of Work: Rip it, Cut it, and Slice it (2023) </h3>
+                    <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
                         Although the styles differ, I want to be a great artist like John Huston someday. This video was
                         an assignment for FVMNA class, and I tried to make a video that is similar to Youtube highlight

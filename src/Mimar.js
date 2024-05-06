@@ -45,8 +45,10 @@ const Mimar = () => {
                         however, I have some connections with his work because I try to combine diverse cultures.
                     </p>
                     <img src={MimarExample} alt="Example-Image" className="example-img" />
-                    <h3>Example of Work: 망운지정(How a child away from home misses their parents) (2023) </h3>
-                    <h2>Related to Mine</h2>
+                    <h3 className="btitle">
+                        Example of Work: 망운지정(How a child away from home misses their parents) (2023){' '}
+                    </h3>
+                    <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
                         I tried to mix different cultures like Mimar Sinan by mixing the concept of "mangunjijeong," an
                         the archaic surname from my homeland, South Korea, with sculpture and technology. This piece is

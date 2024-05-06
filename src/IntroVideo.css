@@ -1,6 +1,21 @@
 body {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .PlayButton {
-    display: none;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    background-color: #a89058;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

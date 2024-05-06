@@ -26,7 +26,7 @@
 }
 
 .example-img {
-    width: 50%;
+    width: 500px;
     height: auto;
     margin: 0 auto;
     display: block;
@@ -38,6 +38,18 @@
     font-size: 1.2rem;
     line-height: 1.5;
     color: #ffffff;
+}
+.btitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    color: #ffffff;
+    text-align: center;
+}
+.stitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
+    color: #ffffff;
+    text-align: center;
 }
 .exm {
     margin: 0 auto;

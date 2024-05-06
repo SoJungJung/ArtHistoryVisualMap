@@ -19,7 +19,7 @@ const artists = [
     { name: 'Diego Rivera', route: '/rivera' },
     { name: 'Gilbert Rohde', route: '/rohde' },
     { name: 'Theo Van Doesburg', route: '/doesberg' },
-    { name: 'Huston', route: '/huston' },
+    { name: 'John Huston', route: '/huston' },
     { name: 'Augustus Welby Northmore Pugin', route: '/pugin' },
 ];
 
@@ -40,12 +40,16 @@ const Main = () => {
     };
     const [hoverIndex, setHoverIndex] = useState(null);
 
+    const handleJHClick = () => {
+        navigate('/junhyung');
+    };
+
     return (
         <div className="main-container">
             <h1 id="title" className="title">
                 Jun Hyung Rhee Visual Map
             </h1>
-            <img src={JHImg} alt="JHImg" className="sun" />
+            <img src={JHImg} alt="JHImg" className="sun" onClick={handleJHClick} />
             {/* <div className="orbits-container">
         {artists.map((artist, index) => (
           <div key={index} className={`orbit orbit-${index + 1}`}>

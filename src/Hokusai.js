@@ -45,8 +45,8 @@ const Hokusai = () => {
                         centuries.
                     </p>
                     <img src={HokusaiExample} alt="Example-Image" className="example-img" />
-                    <h3>Example of Work: The Island (2022) </h3>
-                    <h2>Related to Mine</h2>
+                    <h3 className="btitle">Example of Work: The Island (2022) </h3>
+                    <h2 className="stitle">Related to Mine</h2>
                     <p className="exm">
                         Although I seldom drew landscapes like Hokusai, I drew simulated island landscapes. This piece
                         was drawn after the pillows and a blanket on my bed. It is not colorful or energetic like
